@@ -82,7 +82,23 @@ public class SequentialSearcher {
                 newArr[i] = array[i];
             }
         }
-        return newArr;
+
+        int count = 0;
+        for (int num : newArr) {
+            if ((num % 2 == 0) && (num != 0)) {
+                count++;
+            }
+        }
+
+        int[] finalArr = new int[count];
+        int j = 0;
+        for (int i = 0; i < newArr.length; i++) {
+            if (newArr[i] != 0) {
+                finalArr[j] = newArr[i];
+                j++;
+            }
+        }
+        return finalArr;
     }
 
     // Doesn't work
