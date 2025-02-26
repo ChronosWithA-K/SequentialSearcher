@@ -101,8 +101,7 @@ public class SequentialSearcher {
         return finalArr;
     }
 
-    // Doesn't work
-     private static boolean isSorted(int[] array) {
+    private static boolean isSorted(int[] array) {
         int count = 0;
         int num = array[0];
 
