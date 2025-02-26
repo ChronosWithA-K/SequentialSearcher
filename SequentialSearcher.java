@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class SequentialSearcher {
-    
+
     public static void main(String[] args) {
         int[] arr = {3, 1, 4, 1, 5, 9, 2, 6, 5};
         int v = 1;
@@ -16,7 +16,7 @@ public class SequentialSearcher {
         System.out.println(isSorted(arr));
         System.out.println(sortOrder(arr));
     }
-    
+
     private static int find(int[] array, int value) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == value) {
@@ -113,28 +113,28 @@ public class SequentialSearcher {
         }
 
         return count == array.length;
-     }
+    }
 
-     private static int sortOrder(int[] array) {
-         int countAsc = 0;
-         int countDesc = 0;
-         int num = array[0];
+    private static int sortOrder(int[] array) {
+        int countAsc = 0;
+        int countDesc = 0;
+        int num = array[0];
 
-         for (int i = 1; i < array.length; i++) {
-             if (num < array[i]) {
-                 countAsc++;
-                 num = array[i];
-             } else if (num > array[i]) {
-                 countDesc++;
-             }
-         }
+        for (int i = 1; i < array.length; i++) {
+            if (num < array[i]) {
+                countAsc++;
+                num = array[i];
+            } else if (num > array[i]) {
+                countDesc++;
+            }
+        }
 
-         if (countAsc == array.length) {
-             return 1;
-         } else if (countDesc == array.length) {
-             return -1;
-         } else {
-             return 0;
-         }
-     }
+        if (countAsc == array.length) {
+            return 1;
+        } else if (countDesc == array.length) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
 }
