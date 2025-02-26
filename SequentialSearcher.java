@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class SequentialSearcher {
     
     public static void main(String[] args) {
@@ -10,8 +12,9 @@ public class SequentialSearcher {
         System.out.println(sum(arr));
         System.out.println(minOdd(arr));
         System.out.println(containsDuplicates(arr));
-        System.out.println(even(arr));
+        System.out.println(Arrays.toString(even(arr)));
         System.out.println(isSorted(arr));
+        System.out.println(sortOrder(arr));
     }
     
     private static int find(int[] array, int value) {
@@ -82,6 +85,7 @@ public class SequentialSearcher {
         return newArr;
     }
 
+    // Doesn't work
      private static boolean isSorted(int[] array) {
         int count = 0;
         int num = array[0];
@@ -93,10 +97,7 @@ public class SequentialSearcher {
             }
         }
 
-        if (count == array.length) {
-            return true;
-        }
-        return false;
+        return count == array.length;
      }
 
      private static int sortOrder(int[] array) {
